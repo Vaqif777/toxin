@@ -44,10 +44,16 @@ header {
 			display: flex;
 			justify-content: space-between;
 			.logo {
-				img {
-					vertical-align: middle;
-					&.brand {
-						margin-left: 12.5px;
+				a {
+					display: block;
+					img {
+						vertical-align: middle;
+						&.brand {
+							margin-left: 12.5px;
+						}
+					}	
+					&:hover {
+						text-decoration: none;	
 					}
 				}
 			}
@@ -100,21 +106,149 @@ header {
 main {
 	border-bottom: 1px solid #E5E5E5;
 	.banner_block {
+		position: relative;
+		background-image: url(image3.jpg);
+		background-size: cover;	
+		background-repeat: no-repeat;
 		img {
-			width: 100%;
+			width: 100%;	
+		}
+		p.content {
+			position: absolute;
+			right: 134px;
+			bottom: 18px;
+			width: 297px;
+			text-align: right;	
+			color: rgba(31, 32, 65, 0.75);
+			line-height: 24px;	
+		}
+		#modal {
+			position: absolute;
+			top: 70px;	
+			left: 140px;	
+			border: 1px solid rgba(0, 0, 0, 0.12);
+			border-radius: 4px;	
+			width: 380px;	
+			height: 374px;	
+			background: #fff;	
+			padding: 30px;	
+			font-weight: 700;
+			color: #1F2041;
+			h3 {
+				font-size: 24px;
+				line-height: 29px;
+			}
+			form {
+				.form_wrapp {
+					display: flex;	
+					justify-content: space-between;	
+					flex-wrap: wrap;	
+					line-height: 15px;	
+					h4 {
+						font-size: 12px;
+						text-transform: uppercase;	
+						margin: 20px 0 5px;		
+					}
+					.date {
+						input {
+							border: 1px solid rgba(31, 32, 65, 0.25);
+							box-sizing: border-box;
+							border-radius: 4px;
+							color: rgba(31, 32, 65, 0.75);
+							width: 150px;
+							height: 40px;
+							color: rgba(31, 32, 65, 0.75);
+							padding: 0 10px;
+							background: #fff;	
+							font-size: 14px;	
+						}
+					}
+					.guest {
+						select {
+							border: 1px solid rgba(31, 32, 65, 0.25);
+							box-sizing: border-box;
+							border-radius: 4px;
+							width: 100%;	
+							color: rgba(31, 32, 65, 0.75);
+							padding: 12.5px 15px;
+							width: 320px;
+							font-size: 14px;	
+						}
+					}
+					input[type="submit"] {
+						background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+						border-radius: 22px;
+						width: 100%;	
+						margin-top: 30px;	
+						color: #fff;	
+						font-weight: 700;
+						text-transform: uppercase;
+						padding: 14.5px;
+						border: none;
+						cursor: pointer;	
+					}
+				}
+			}
 		}
 	}
 	.content_block {
 		padding: 100px 0;
 		.container {
 			.content_block_wrapp {
+				display: flex;	
+				justify-content: space-between;	
 				ul {
 					display: inline-block;
-					li.heading {
-						font-weight: 700;
-						text-transform: uppercase;
-						font-size: 12px;
-						color: #1F2041;
+					li {
+						margin-bottom: 20px;	
+						&.heading {
+							font-weight: 700;
+							text-transform: uppercase;
+							font-size: 12px;
+							color: #1F2041;
+						}
+						&.logo {
+							overflow: hidden;
+							a {
+								img {
+									float: left;	
+									&.brand {
+										margin-left: 12.5px;
+										margin-top: 13px;	
+									}
+								}
+							}
+						}
+						&.search {
+							position: relative;	
+							&:after {
+								content: '';
+								background-image: url(arrow_forward.png);
+								width: 18px;	
+								height: 18px;	
+								top: 13px;	
+								right: 13px;	
+								position: absolute;
+							}
+						}
+						input {
+							width: 100%;	
+							color: rgba(31, 32, 65, 0.25);
+							border: 1px solid rgba(31, 32, 65, 0.25);
+							padding: 14px 44px 13px 15px;	
+							border-radius: 4px;
+							position: relative;
+							&::placeholder {
+								color: rgba(31, 32, 65, 0.25);
+							}
+						}
+					}
+					&:first-child, &:last-child {
+						li.text {
+							width: 260px;	
+							color: rgba(31, 32, 65, 0.75);
+							line-height: 24px;	
+						}
 					}
 				}
 			}
@@ -125,4 +259,18 @@ main {
 footer {
 	height: 70px;
 	line-height: 70px;
+	.container {
+		.footer_wrapp {
+			display: flex;	
+			justify-content: space-between;	
+			p {
+
+			}
+			.social_block {
+				img {
+					margin-left: 20px;	
+				}
+			}
+		}
+	}
 }
