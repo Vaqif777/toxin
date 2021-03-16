@@ -7,6 +7,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<title>TOXIN</title>
+	<script src="jquery-3.3.1.min.js"></script>
+
+
 </head>
 <body>
 	<header>
@@ -14,8 +17,8 @@
 			<div class="header_wrapp">
 				<div class="logo">
 					<a href="#">
-						<img src="Group.png" alt="logotype" class="logotype">
-						<img src="TOXIN.png" alt="brand" class="brand">
+						<img src="image/Group.png" alt="logotype" class="logotype">
+						<img src="image/TOXIN.png" alt="brand" class="brand">
 					</a>
 				</div>
 				<nav>
@@ -47,7 +50,7 @@
 	
 	<main>
 		<div class="banner_block">
-			<img src="image3.jpg" alt="">
+			<img src="image/image3.jpg" alt="">
 			<p class="content">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
 			<div id="modal" class="search">
 				<h3>Найдём номера под ваши пожелания</h3>
@@ -55,24 +58,35 @@
 					<div class="form_wrapp">	
 						<div class="in date">
 							<h4>Прибытие</h4>
-							<input type="date">
+						<!-- 	<input type="text"
+								data-range="true"
+								data-multiple-dates-separator=" - "
+								data-language="ru"
+								class="datepicker-here in"/ placeholder="ДД.ММ.ГГГГ"> -->
+								<input type='text' class='datepicker-here in' data-language='ru' placeholder="ДД.ММ.ГГГГ">
 						</div>
 						<div class="out date">
 							<h4>Выезд</h4>
-							<input type="date">
+							<!-- <input type="text"
+								data-range="true"
+								data-multiple-dates-separator=" - "
+								data-language="ru"
+								class="datepicker-here out"/ placeholder="ДД.ММ.ГГГГ"> -->
+								<input type='text' class='datepicker-here out' data-language='ru' placeholder="ДД.ММ.ГГГГ">
 						</div>
 						<div class="guest">	
 							<h4>Гости</h4>
 							<select name="" id="">
 								<option value="">Сколько гостей</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
+								<option value="">Взрослые</option>
+								<option value="">Дети</option>
+								<option value="">Младенцы</option>	
+								<option value="">Применить Очистить</option>	
 							</select>
 						</div>	
-						<input type="submit" value="Подобрать номер"> 
+						<div class="submit">
+							<input type="submit" value="Подобрать номер"> 
+						</div>
 					</div>
 				</form>
 			</div>
@@ -83,8 +97,8 @@
 					<ul>
 						<li class="logo">
 							<a href="#">
-								<img src="Group.png" alt="logotype" class="logotype">
-								<img src="TOXIN.png" alt="brand" class="brand">
+								<img src="image/Group.png" alt="logotype" class="logotype">
+								<img src="image/TOXIN.png" alt="brand" class="brand">
 							</a>
 						</li>
 						<li class="text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"<li>
@@ -124,12 +138,37 @@
 				<div class="footer_wrapp">	
 					<p>Copyright &copy; 2018 Toxin отель. Все права защищены.</p>
 					<div class="social_block">
-						<a href="/"><img src="twitter.png" alt=""></a>
-						<a href="/"><img src="fb.png" alt=""></a>
-						<a href="/"><img src="inst.png" alt=""></a>
+						<a href="/"><img src="image/twitter.png" alt=""></a>
+						<a href="/"><img src="image/fb.png" alt=""></a>
+						<a href="/"><img src="image/inst.png" alt=""></a>
 					</div>
 				</div>
 			</div>
 		</footer>
+
+		<!-- <script>
+
+			var date = document.querySelectorAll('input[type="date"]');
+
+			var date1 = document.querySelector('input.in');
+			var date2 = document.querySelector('input.out');
+
+			for (var i = 0; i < date.length;  i++) {
+				date[i].onchange = f;
+			}
+
+
+			function f(e) {
+				switch(event.target) {
+					case date1: 
+					console.log('Дата Заезда ' + date1.value);
+					break;
+					case date2: 
+					console.log('Дата Выезда ' + date2.value);
+				}
+			}
+
+
+		</script> -->
 	</body>
 	</html>
